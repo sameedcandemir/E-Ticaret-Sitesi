@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Konum-İletişim</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contact-button i {
+            margin-right: 10px;
+        }
+        .contact-button.instagram {
+            background-color: #E1306C;
+        }
+        .contact-button.instagram:hover {
+            background-color: #C13584;
+        }
+        .contact-button.whatsapp {
+            background-color: #25D366;
+        }
+        .contact-button.whatsapp:hover {
+            background-color: #1EBE5B;
+        }
+        .contact-button.gmail {
+            background-color: #D14836;
+        }
+        .contact-button.gmail:hover {
+            background-color: #B5302B;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="Candemirlogo.png" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html" class="">Ana Sayfa</a>
+            <a href="urunler.html" class="">Ürünler</a>
+            <a href="contact.html" class="active">Konum-İletişim</a>
+            <a href="destek.html" class="">Canlı Destek</a>
+            <a href="uyeol.html" class="">Üye Ol</a>
+        </nav>
+        
+        <div class="buttons">
+            <button>
+                <i class="fas fa-search"></i>
+            </button>
+            <button>
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+            <button>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093775!2d144.9630576153159!3d-37.81410797975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sVictoria%20State%20Library!5e0!3m2!1sen!2sau!4v1600725812424!5m2!1sen!2sau" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+    <section class="ileitisim">
+        <h1 class="heading">Formu <span> Doldur</span></h1>
+        <div class="form-container">
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Ad Soyad</label>
+                    <input type="text" id="name" name="name" placeholder="Adınızı ve Soyadınızı Giriniz" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Posta</label>
+                    <input type="email" id="email" name="email" placeholder="E-Posta Adresinizi Giriniz" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefon Numaranızı Giriniz" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Mesajınızı Yazınız" required></textarea>
+                </div>
+                <button type="submit" class="btn">Gönder</button>
+            </form>
+        </div>
+    </section>
+    
+    <div class="contact-buttons">
+        <a href="https://www.instagram.com/smdcandemir" class="contact-button instagram" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://wa.me/5340623524" class="contact-button whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:websamedcandemir@gmail.com" class="contact-button gmail">
+            <i class="fas fa-envelope"></i> Gmail
+        </a>
+    </div>
+    <section class="footer">
+        <div class="search">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="btn btn-primary">search
+
+            </button>
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/smdcandemir/#" class="fab fa-instagram"></a>
+        </div>
+        <div class="links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="urunler.html">Ürünler</a>
+            <a href="contact.html">Konum-İletişim</a>
+            <a href="destek.html">Destek</a>
+
+        </div>
+    </section>
+</body>
+</html>

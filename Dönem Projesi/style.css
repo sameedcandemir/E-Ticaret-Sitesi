@@ -1,0 +1,447 @@
+/* Google Fonts'tan Poppins fontu import ediliyor. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* CSS değişkenleri tanımlanıyor. */
+:root {
+    --main-color: #191717; /* Ana renk */
+    --black-color: #0e0e0e; /* Siyah renk */
+    --border: 0.1rem solid rgba(255,255,255,0.4); /* Yarı saydam beyaz kenarlık */
+}
+
+/* Temel stil ayarları */
+* {
+    font-family: "Poppins", sans-serif; /* Yazı tipi */
+    margin: 0; /* Varsayılan boşluk sıfırlanıyor */
+    padding: 0; /* Varsayılan dolgu sıfırlanıyor */
+    box-sizing: border-box; /* Kutu boyutlandırma ayarı */
+    outline: none; /* Odak çevresindeki kenarlık kaldırılıyor */
+    border: none; /* Kenarlık sıfırlanıyor */
+    text-decoration: none; /* Alt çizgi kaldırılıyor */
+    text-transform: capitalize; /* Metnin ilk harfi büyük yazılıyor */
+    transition: 0.2s ease; /* Geçiş efektleri */
+}
+
+/* HTML genel ayarları */
+html {
+    font-size: 62.5%; /* Temel font büyüklüğü (10px) */
+    overflow-x: hidden; /* Yatay kaydırma kaldırılıyor */
+    scroll-padding-top: 9rem; /* Scroll konumu düzenleniyor */
+    scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
+}
+
+/* Scrollbar stili */
+html::-webkit-scrollbar {
+    width: 0.8rem; /* Scrollbar genişliği */
+    background-color: white; /* Arka plan rengi */
+}
+html::-webkit-scrollbar-track {
+    background-color: transparent; /* Scrollbar rayının rengi */
+}
+html::-webkit-scrollbar-thumb {
+    border-radius: 3rem; /* Scrollbar yuvarlatma */
+    background-color: var(--black-color); /* Scrollbar rengi */
+}
+
+/* Body genel ayarları */
+body {
+    background-color: #191717; /* Arka plan rengi */
+    height: 200vh; /* İçeriğin yüksekliği */
+}
+
+/* Section (bölüm) genel ayarları */
+section {
+    padding: 3.5rem 7%; /* İç dolgu */
+}
+
+/* Buton stili */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem; /* Tam yuvarlak köşe */
+    font-size: 1.7rem;
+    color: white; /* Metin rengi */
+    background-color: #0e0e0e; /* Arka plan rengi */
+    cursor: pointer; /* İşaretçi görünümü */
+}
+.btn:hover {
+    opacity: 0.9; /* Hover durumunda opaklık değişiyor */
+}
+
+/* Başlık stili */
+.heading {
+    color: #fff; /* Beyaz renk */
+    text-transform: uppercase; /* Büyük harflerle yazım */
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid #fff; /* Alt çizgi */
+}
+.heading span {
+    color: red; /* Kırmızı vurgulu kelimeler */
+}
+
+/* Arama input stili */
+.search-input {
+    font-size: 1.6rem;
+    color: var(--black-color);
+    padding: 1rem;
+    text-transform: none; /* Küçük harf */
+    border-radius: 3rem;
+}
+
+/* Header (üst menü) stili */
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(189, 15, 15, 0.75); /* Gölge efekti */
+    position: sticky; /* Sabitlenmiş konum */
+    top: 0;
+    z-index: 1000; /* Üstte gösterim */
+}
+.header .logo img {
+    height: 11rem; /* Logo yüksekliği */
+}
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent; /* Alt kenarlık şeffaf */
+}
+.header .navbar .active,
+.header .navbar a:hover {
+    border-color: red; /* Hover ve aktif durumda kenarlık kırmızı */
+    padding-bottom: 0.5rem; /* Alt kenar boşluk */
+}
+.header .buttons button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent; /* Arka plan şeffaf */
+}
+
+
+/*HEADER END*/
+/*HOME START*/
+.home {
+    min-height: 100vh; /* Sayfanın yüksekliğini, görüntüleme alanının tamamını kaplayacak şekilde ayarla. */
+    background: url(arkpaln1245.jpg); /* Arka plan olarak belirtilen resmi kullan. */
+    background-size: cover; /* Arka plan resmini alanın tamamını dolduracak şekilde ayarla*/
+    background-position: center; /* Arka plan görselini dikey ve yatay olarak ortala*/
+    margin-top: -15.5rem; /* Öğeyi yukarıya kaydırmak için */
+    display: flex; /* İçerik düzeni için (Flexbox) kullan. */
+    align-items: center; /* Flexbox içeriğini dikey olarak ortala*/
+}
+
+.home .content {
+    max-width: 60rem; /* İçerik bölümünün maksimum genişliği 60rem */
+}
+
+.home .content h3 {
+    font-size: 6rem; /* Başlık metninin boyutu 6rem  */
+    color: black; /* Başlık metni rengini siyah */
+}
+
+.home .content p {
+    font-size: 2rem; /* Paragraf metninin boyutunu 2rem  */
+    font-weight: 300; /* Metnin yazı kalınlığı ayarı */
+    line-height: 1.8; /* Satır yüksekliği 1.8  */
+    padding: 1rem 0; /* Üst ve alt kenarlara 1rem boşluk ekle, soldan ve sağdan boşluk bırakma */
+    color: rgb(0, 0, 0); /* Paragraf metni rengini siyah  yap. */
+}
+
+/*HOME END*/
+/*MENU START*/
+.menu .box-container {
+    display: grid; /* Grid düzeni kullan. */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Dinamik sütun genişliği. */
+    gap: 1.5rem; /* Hücreler arası boşluk. */
+}
+
+.menu .box-container .box {
+    padding: 3rem; /* İç boşluk. */
+    background-color: #fff; /* Beyaz arka plan. */
+    border-radius: 3rem; /* Köşeleri yuvarlat. */
+    min-height: 60rem; /* Minimum yükseklik. */
+    display: flex; /* Flexbox kullan. */
+    flex-direction: column; /* Dikey yerleşim. */
+    align-items: flex-start; /* Sol hizala. */
+    justify-content: space-between; /* Üst-alt öğeler arasında boşluk. */
+}
+
+.menu .box-container .box img {
+    width: 100%; /* Görüntü genişliği tam. */
+    object-fit: cover; /* Görüntüyü düzgün yerleştir. */
+}
+
+.menu .box-container .box .menu-category {
+    font-size: 1.2rem; /* Kategori yazı boyutu. */
+}
+
+.menu .box-container .box h3 {
+    font-size: 3rem; /* Başlık yazı boyutu. */
+    padding: 1rem 0; /* Üst-alt boşluk. */
+}
+
+.menu .box-container .box .price {
+    font-size: 2.5rem; /* Fiyat yazı boyutu. */
+    padding: 0.5rem 0; /* Üst-alt boşluk. */
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem; /* Eski fiyat yazı boyutu. */
+    text-decoration: line-through; /* Üzeri çizili stil. */
+    font-weight: 300; /* İnce yazı stili. */
+}
+
+/*MENU END*/
+/*HAKKIMIZDA BAŞLANGIÇ*/
+.hakkimizda .box-container {
+    display: grid; /* Grid düzeni kullan. */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Dinamik sütun genişliği. */
+    gap: 1.5rem; /* Hücreler arasında boşluk. */
+}
+
+.hakkimizda .box-container .box {
+    text-align: center; /* Metni ortala. */
+    background-color: #fff; /* Beyaz arka plan. */
+    border-radius: 10rem; /* Köşeleri büyük ölçüde yuvarlat. */
+    position: relative; /* Konumlandırma için referans ayarla. */
+}
+.hakkimizda-img {
+    width: 200px; /* Genişliği istediğiniz boyutta ayarlayın */
+    height: auto; /* Oranlı şekilde küçülmesini sağlar */
+    display: block; /* Gerekiyorsa merkezlemek için */
+    margin: 0 auto; /* Görseli ortalamak için */
+}
+/*HAKKIMIZDA BİTİŞ*/
+/*FORM BAŞLANGIÇ*/
+.form-container {
+    max-width: 600px; /* Formun maksimum genişliği. */
+    margin: 0 auto; /* Ortalamak için kenar boşlukları. */
+    padding: 20px; /* İç boşluk. */
+    background-color: #fff; /* Beyaz arka plan. */
+    border-radius: 8px; /* Köşeleri yuvarlat. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti. */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Grup altı boşluk. */
+}
+
+.form-group label {
+    display: block; /* Satır blok düzeni. */
+    margin-bottom: 5px; /* Alt boşluk. */
+    font-weight: bold; /* Kalın yazı. */
+    color: #333; /* Koyu gri renk. */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Tam genişlik. */
+    padding: 10px; /* İç boşluk. */
+    border: 1px solid #dd4a4a; /* Kırmızı kenar çizgisi. */
+    border-radius: 4px; /* Köşeleri yuvarlat. */
+    font-size: 14px; /* Yazı boyutu. */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff; /* Odakta mavi kenar. */
+    outline: none; /* Odak çizgisini kaldır. */
+}
+/*FORM BİTİŞ*/
+/*BUTON BAŞLANGIÇ*/
+.btn {
+    display: inline-block; /* Satır içi blok düzeni */
+    padding: 10px 20px; /* İç boşluk */
+    background-color: #007bff; /* Mavi arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+    text-align: center; /* Metni ortala */
+    border: none; /* Kenarlık yok */
+    border-radius: 30rem; /* Köşeleri yuvarlak */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* İmleç el simgesi olur */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Üzerine gelince koyu mavi renk */
+}
+
+.map-container {
+    width: 100%; /* Tüm genişliği kaplar */
+    max-width: 1400px; /* Maksimum genişlik artırıldı */
+    margin: 20px auto; /* Ortala */
+    border: 1px solid red; /* Harita çevresine çerçeve */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+iframe {
+    width: 100%; /* Harita konteynerine tam oturur */
+    height: 750px; /* Yükseklik artırıldı */
+}
+/*FOOTER BAŞLANGIÇ*/
+.footer {
+    background-color: var(--black-color); /* Siyah arka plan */
+    text-align: center; /* Ortalanmış metin */
+}
+
+.footer .search {
+    display: flex; /* Flexbox düzeni */
+    justify-content: center; /* Ortala */
+}
+
+.footer .search .search-input {
+    width: 30rem; /* Arama kutusu genişliği */
+}
+
+.footer .search .btn-primary {
+    background-color: red; /* Kırmızı buton */
+    padding: 1rem 2rem; /* İç boşluk */
+    margin-left: 1rem; /* Sol boşluk */
+}
+
+.footer .share {
+    padding: 2rem 0; /* Üst ve alt boşluk */
+}
+
+.footer .share a {
+    width: 5rem; /* Genişlik */
+    height: 5rem; /* Yükseklik */
+    line-height: 5rem; /* Metni ortala */
+    color: #fff; /* Beyaz yazı */
+    font-size: 2.5rem; /* Yazı boyutu */
+    border: var(--border); /* Kenarlık */
+    border-radius: 50%; /* Yuvarlak şekil */
+    margin: 0.3rem; /* Dış boşluk */
+}
+
+.footer .share a:hover {
+    background-color: var(--main-color); /* Üzerine gelince ana renk */
+}
+
+.footer .links {
+    display: flex; /* Flexbox düzeni */
+    justify-content: center; /* Ortala */
+    flex-wrap: wrap; /* Satır sarması */
+    gap: 1rem; /* Elemanlar arası boşluk */
+}
+
+.footer .links a {
+    background-color: red; /* Kırmızı arka plan */
+    padding: 0.7rem 2rem; /* İç boşluk */
+    color: #fff; /* Beyaz yazı */
+    font-size: 2rem; /* Yazı boyutu */
+}
+
+.footer .links a:hover {
+    background-color: var(--black-color); /* Siyah arka plan */
+    opacity: 0.7; /* Şeffaflık */
+}
+
+.footer .links a.active {
+    background-color: var(--black-color); /* Aktif link arka planı siyah */
+}
+
+.footer .credit {
+    font-size: 2rem; /* Yazı boyutu */
+    color: #fff; /* Beyaz yazı */
+    font-weight: 300; /* İnce yazı */
+    padding-top: 1.5rem; /* Üst boşluk */
+}
+
+.footer .credit span {
+    color: red; /* Kırmızı yazı */
+}
+/*FOOTER BİTİŞ*/
+/*ÜYE OL BUTONU*/
+.signup {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.signup .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup .form-group {
+    margin-bottom: 20px;
+}
+
+.signup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.signup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.signup button {
+    background-color: #28a745;/*eklediğimiz logo arka plan rengi*/
+    color: #fff;/*eklediğimiz logo rengi */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;/*yuvarlaklık verdik*/
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup button:hover {
+    background-color: #218838;
+}
+/*ÜYE OL BUTONU*/
+/*SOSYAL MEDYA İKONLARI BAŞLANGIÇ*/
+
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons a:nth-child(1) {
+    background-color: #E1306C;/*İNSTAGRAM İÇİN UYGUN RENK*/ 
+}
+
+.social-icons a:nth-child(2) {
+    background-color: #25D366; /*WHATSAPP İÇİN UYGUN RENK*/
+}
+
+.social-icons a:nth-child(3) {
+    background-color: #D44638; /*GMAİL İÇİN UYGUN RENK*/
+}
+

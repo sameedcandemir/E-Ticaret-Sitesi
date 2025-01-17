@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Ol</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Genel Ayarlar */
+        body {
+            background-color: #f4f4f4; /* Açık gri arka plan */
+            font-family: Arial, sans-serif;
+            color: #333; /* Koyu gri metin rengi */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-form {
+            background-color: #fff; /* Beyaz form arka planı */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555; /* Başlık koyu gri */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444; /* Etiket koyu ton */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd; /* Açık gri kenarlık */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Hafif açık arka plan */
+            color: #333; /* Koyu metin rengi */
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #007bff; /* Mavi vurgu kenarı */
+            background-color: #fff; /* Odakta beyaz arka plan */
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Vurgu mavi */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Daha koyu mavi hover */
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666; /* Hafif gri metin */
+        }
+
+        .form-footer a {
+            color: #007bff; /* Link vurgu rengi */
+            text-decoration: none;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section class="signup-form">
+        <h1>Üye Ol</h1>
+        <form action="signup.php" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" name="username" placeholder="Kullanıcı adınızı girin" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Posta:</label>
+                <input type="email" id="email" name="email" placeholder="E-Posta adresinizi girin" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Şifre Tekrar:</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Şifrenizi tekrar girin" required>
+            </div>
+            <button type="submit" class="btn">Üye Ol</button>
+        </form>
+        <div class="form-footer">
+            Zaten bir hesabınız var mı? <a href="login.html">Giriş Yap</a>
+        </div>
+    </section>
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert('Şifreler eşleşmiyor!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
